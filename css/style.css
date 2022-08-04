@@ -111,11 +111,28 @@ body {
   color: var(--title-color);
   padding-top: 5px;
   padding-bottom: 5px;
+  transition: color 300ms linear;
 }
 .header-link:hover,
 .header-link:focus {
   color: var(--accent-color);
 }
+
+.actev {
+  position: relative;
+}
+
+.actev::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  left: 0;
+  background-color: var(--accent-color);
+  bottom: -28px;
+}
+
 .header-item:not(:last-child) {
   margin-right: 50px;
 }
@@ -127,6 +144,7 @@ body {
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--pre-title-color);
+  transition: color 300ms linear;
 }
 
 .header-connect {
@@ -140,6 +158,7 @@ body {
 .envelope-icon-header {
   margin-right: 10px;
   fill: var(--pre-title-color);
+  transition: fill 300ms linear;
 }
 
 .header-email:hover {
@@ -159,6 +178,7 @@ body {
 .phone-icon-header {
   margin-right: 10px;
   fill: var(--pre-title-color);
+  transition: fill 300ms linear;
 }
 
 .header-tel:hover {
@@ -174,6 +194,9 @@ body {
 .header-tel:focus .phone-icon-header {
   fill: #2196f3;
 }
+
+/*---- hero ---*/
+
 .hero {
   background-color: #2f303a;
   padding-top: 200px;
@@ -277,7 +300,30 @@ body {
 }
 .gallery-item {
   width: calc((100% - 60px) / 3);
+  position: relative;
 }
+.gallery-text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  color: #ffffff;
+  width: 100%;
+  font-weight: 700;
+  line-height: 16px;
+  padding-top: 27px;
+  padding-bottom: 27px;
+  background-color: rgba(47, 48, 58, 0.8);
+}
+
+/*.one {
+  padding: 27px 107px;
+}
+.two {
+  padding: 27px 113px;
+}
+.three {
+  padding: 27px 95px;
+}*/
 
 /*---------- team ------*/
 .team {
@@ -344,10 +390,12 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: background-color 300ms linear;
 }
 
 .team-soc-icon {
   fill: #afb1b8;
+  transition: fill 300ms linear;
 }
 
 .team-soc-link:hover {
@@ -367,6 +415,7 @@ body {
 }
 
 /*------------- client -------*/
+
 .client {
   padding-bottom: 94px;
 }
@@ -390,10 +439,12 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: border-color 300ms linear;
 }
 
 .client-icon {
   fill: #afb1b8;
+  transition: fill 300ms linear;
 }
 
 .client-icon:hover {
@@ -455,6 +506,7 @@ body {
   letter-spacing: 0.03em;
   color: #ffffff;
   margin-bottom: 9px;
+  transition: color 300ms linear;
 }
 
 .footer-address:hover,
@@ -474,6 +526,7 @@ body {
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
+  transition: color 300ms linear;
 }
 
 .footer-email:hover,
@@ -519,10 +572,12 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: background-color 300ms linear;
 }
 
 .footer-soc-icon {
   fill: #ffffff;
+  transition: fill 300ms linear;
 }
 
 .footer-soc-link:hover {
@@ -558,6 +613,7 @@ body {
   color: var(--title-color);
   padding: 6px 22px;
   border: #f5f4fa;
+  transition: background-color 300ms linear, color 300ms linear;
 }
 
 .menu-btn:hover,
@@ -600,6 +656,7 @@ body {
   box-sizing: border-box;
   background: #ffffff;
   border: 1px solid #eeeeee;
+  transition: box-shadow 300ms linear;
 }
 
 .projects-item:hover {
